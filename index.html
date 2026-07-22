@@ -280,6 +280,347 @@
 </head>
 <body>
 
+<!-- ═══════════════════════════════════════════════════════
+     CLICK-CAPYBARA DEMO DISCLAIMER POPUP
+     Paste this block right after the opening <body> tag
+     in index.html (before <nav id="nav">).
+     ═══════════════════════════════════════════════════════ -->
+<div id="demo-popup-overlay" class="cc-popup-overlay">
+  <div class="cc-popup-content">
+
+    <div class="cc-lang-switcher">
+      <button id="lang-btn-en" class="cc-lang-btn active" data-lang="en">EN</button>
+      <span class="cc-lang-divider">|</span>
+      <button id="lang-btn-de" class="cc-lang-btn" data-lang="de">DE</button>
+    </div>
+
+    <!-- ENGLISH -->
+    <div id="content-en" class="cc-lang-content">
+      <div class="cc-popup-header">
+        <a href="https://www.click-capybara.com" target="_blank" rel="noopener" class="cc-chip">Click-Capybara Demo <span class="cc-chip-arrow">↗</span></a>
+        <h2>🚀 Welcome to the Sandbox!</h2>
+      </div>
+
+      <div class="cc-popup-body">
+        <p>Think of this website as a giant block of digital clay, <strong>built from information available online</strong>. You can't break anything here, so feel free to click, explore, and test to your heart's content.</p>
+
+        <div class="cc-feature-list">
+          <div class="cc-feature-item">
+            <strong>🛠️ Everything is Customizable</strong>
+            <p>Love the layout but hate the colors? Want to move that button? Every element can be tailored to fit your exact needs.</p>
+          </div>
+          <div class="cc-feature-item">
+            <strong>🎯 Click with Confidence</strong>
+            <p>Try out the interactive features below. If something feels missing, it's just because we haven't customized it for you yet.</p>
+          </div>
+          <div class="cc-feature-item">
+            <strong>💡 How it Works</strong>
+            <p>Navigate through the pages normally. Use the interface to toggle different settings on the fly and see how the logic flows.</p>
+          </div>
+          <div class="cc-feature-item cc-highlight-box">
+            <strong>💎 Included Functions</strong>
+            <p>All core features — including hosting, booking tools, and contact forms — are entirely free and tailored to your specific needs. You only pay for the domain name itself.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-popup-footer">
+        <button class="cc-popup-close-btn cc-popup-btn">Let's Explore!</button>
+      </div>
+    </div>
+
+    <!-- GERMAN -->
+    <div id="content-de" class="cc-lang-content cc-is-hidden-lang">
+      <div class="cc-popup-header">
+        <a href="https://www.click-capybara.com" target="_blank" rel="noopener" class="cc-chip">Click-Capybara Demo <span class="cc-chip-arrow">↗</span></a>
+        <h2>🚀 Willkommen in der Sandbox!</h2>
+      </div>
+
+      <div class="cc-popup-body">
+        <p>Betrachte diese Website einfach als digitalen Spielplatz, <strong>erstellt aus online verfügbaren Informationen</strong>. Du kannst hier absolut nichts kaputtmachen. Klicke, entdecke und teste also völlig ungezwungen.</p>
+
+        <div class="cc-feature-list">
+          <div class="cc-feature-item">
+            <strong>🛠️ Alles ist flexibel anpassbar</strong>
+            <p>Das Layout gefällt dir, aber die Farben nicht? Du möchtest einen Button verschieben? Jedes einzelne Element lässt sich exakt nach deinen Wünschen gestalten.</p>
+          </div>
+          <div class="cc-feature-item">
+            <strong>🎯 Klicke ganz unbesorgt</strong>
+            <p>Probiere die interaktiven Funktionen direkt aus. Wenn dir etwas fehlt, liegt es nur daran, dass wir es noch nicht speziell für dich eingerichtet haben.</p>
+          </div>
+          <div class="cc-feature-item">
+            <strong>💡 So funktioniert es</strong>
+            <p>Navigiere ganz normal durch die Seiten. Nutze die Benutzeroberfläche, um Einstellungen spontan zu ändern und zu sehen, wie die Logik dahinter läuft.</p>
+          </div>
+          <div class="cc-feature-item cc-highlight-box">
+            <strong>💎 Inklusive Funktionen</strong>
+            <p>Alle Kernfunktionen wie Webhosting, Buchungs-Tools und Kontaktformulare sind komplett kostenlos und maßgeschneidert einsatzbereit. Gezahlt wird lediglich für die eigene Domain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-popup-footer">
+        <button class="cc-popup-close-btn cc-popup-btn">Jetzt entdecken!</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ── CLICK-CAPYBARA BRAND TOKENS ─────────────────────── */
+#demo-popup-overlay {
+  --cc-ink: #0E0E10;
+  --cc-gold: #fcba02;
+  --cc-gold-soft: #FFF6D6;
+  --cc-cream: #F6F3EC;
+  --cc-body: #EFECE3;
+  --cc-mut: #6b6b70;
+}
+
+.cc-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(14, 14, 16, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.cc-popup-content {
+  background-color: var(--cc-cream);
+  padding: 32px;
+  border-radius: 22px;
+  max-width: 540px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  box-shadow: 0 24px 60px -20px rgba(14, 14, 16, 0.45);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--cc-ink);
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid rgba(14, 14, 16, 0.06);
+}
+
+.cc-lang-switcher {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cc-lang-btn {
+  background: none;
+  border: none;
+  color: var(--cc-mut);
+  cursor: pointer;
+  padding: 2px 6px;
+  font-weight: 700;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+.cc-lang-btn:hover { color: var(--cc-ink); }
+.cc-lang-btn.active { color: var(--cc-ink); text-decoration: underline; text-decoration-color: var(--cc-gold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.cc-lang-divider { margin: 0 2px; color: #cfcac0; user-select: none; }
+
+.cc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--cc-ink);
+  color: var(--cc-gold);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cc-chip:hover { transform: translateY(-1px); box-shadow: 0 8px 18px -8px rgba(14,14,16,0.5); }
+.cc-chip:active { transform: translateY(0); }
+.cc-chip-arrow { font-size: 12px; transition: transform 0.2s ease; }
+.cc-chip:hover .cc-chip-arrow { transform: translate(1px, -1px); }
+
+.cc-popup-header h2 {
+  margin: 0 0 15px;
+  color: var(--cc-ink);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  padding-right: 60px;
+}
+
+.cc-popup-body p {
+  line-height: 1.6;
+  color: #3a3a3d;
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+
+.cc-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cc-feature-item strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cc-ink);
+  margin-bottom: 3px;
+}
+
+.cc-feature-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #55555a;
+}
+
+.cc-highlight-box {
+  background-color: var(--cc-gold-soft);
+  border-left: 4px solid var(--cc-gold);
+  padding: 12px 16px;
+  border-radius: 0 12px 12px 0;
+}
+
+.cc-popup-footer { text-align: right; }
+
+.cc-popup-btn {
+  background-color: var(--cc-ink);
+  color: var(--cc-gold);
+  border: none;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cc-popup-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(14,14,16,0.5); }
+.cc-popup-btn:active { transform: translateY(0) scale(0.98); }
+
+.cc-popup-overlay.cc-is-hidden { opacity: 0; pointer-events: none; }
+.cc-lang-content.cc-is-hidden-lang { display: none; }
+
+/* ── MOBILE (phones, iPhone standard widths ~390-430px) ── */
+@media (max-width: 480px) {
+  .cc-popup-overlay { padding: 12px; align-items: center; }
+
+  .cc-popup-content {
+    padding: 22px 20px;
+    border-radius: 18px;
+    max-height: 85vh;
+  }
+
+  .cc-lang-switcher { top: 18px; right: 20px; font-size: 12px; }
+  .cc-lang-btn { font-size: 12px; padding: 2px 5px; }
+
+  .cc-chip { font-size: 10px; padding: 5px 9px; margin-bottom: 10px; }
+
+  .cc-popup-header h2 { font-size: 19px; padding-right: 48px; margin-bottom: 12px; }
+
+  .cc-popup-body p { font-size: 14px; margin-bottom: 16px; }
+
+  .cc-feature-list { gap: 12px; margin-bottom: 18px; }
+  .cc-feature-item strong { font-size: 14px; }
+  .cc-feature-item p { font-size: 13px; }
+
+  .cc-highlight-box { padding: 10px 13px; }
+
+  .cc-popup-footer { text-align: center; }
+  .cc-popup-btn { width: 100%; padding: 13px 20px; font-size: 14px; }
+}
+
+/* ── SMALL PHONES (iPhone SE and similar, ≤380px) ── */
+@media (max-width: 380px) {
+  .cc-popup-content { padding: 18px 16px; max-height: 88vh; }
+  .cc-lang-switcher { top: 15px; right: 16px; }
+  .cc-popup-header h2 { font-size: 17px; padding-right: 44px; }
+  .cc-popup-body p { font-size: 13px; }
+  .cc-feature-item strong { font-size: 13px; }
+  .cc-feature-item p { font-size: 12px; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("demo-popup-overlay");
+  if (!overlay) return;
+
+  // Skip the popup if the visitor already dismissed it this session
+  if (sessionStorage.getItem("ccDemoPopupSeen") === "1") {
+    overlay.remove();
+    return;
+  }
+
+  const closeButtons = document.querySelectorAll(".cc-popup-close-btn");
+  const langButtons = document.querySelectorAll(".cc-lang-btn");
+  const contentEn = document.getElementById("content-en");
+  const contentDe = document.getElementById("content-de");
+
+  // Lock the background page while the popup is open. Without this,
+  // scrolling to the bottom of the popup on mobile "hands off" the
+  // scroll to the page underneath, which is the confusing part —
+  // now the page simply can't move until the popup is closed.
+  const lockedScrollY = window.scrollY;
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${lockedScrollY}px`;
+  document.body.style.left = "0";
+  document.body.style.right = "0";
+  document.body.style.width = "100%";
+
+  function closePopup() {
+    overlay.classList.add("cc-is-hidden");
+    sessionStorage.setItem("ccDemoPopupSeen", "1");
+
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    window.scrollTo(0, lockedScrollY);
+  }
+
+  closeButtons.forEach(btn => btn.addEventListener("click", closePopup));
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closePopup(); });
+
+  langButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const targetLang = e.target.getAttribute("data-lang");
+      langButtons.forEach(b => b.classList.remove("active"));
+      e.target.classList.add("active");
+
+      if (targetLang === "de") {
+        contentEn.classList.add("cc-is-hidden-lang");
+        contentDe.classList.remove("cc-is-hidden-lang");
+      } else {
+        contentDe.classList.add("cc-is-hidden-lang");
+        contentEn.classList.remove("cc-is-hidden-lang");
+      }
+    });
+  });
+});
+</script>
+
 <header>
   <nav class="wrap">
     <a href="#top" class="nav-logo">
