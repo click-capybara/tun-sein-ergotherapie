@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tunundsein-ergotherapie.de/</loc>
+  </url>
+  <url>
+    <loc>https://tunundsein-ergotherapie.de/leistungen.html</loc>
+  </url>
+  <url>
+    <loc>https://tunundsein-ergotherapie.de/praxis-team.html</loc>
+  </url>
+  <url>
+    <loc>https://tunundsein-ergotherapie.de/impressum.html</loc>
+  </url>
+  <url>
+    <loc>https://tunundsein-ergotherapie.de/datenschutz.html</loc>
+  </url>
+  <!--
+    neurofeedback.html ist absichtlich NICHT in der Sitemap, solange die Seite
+    noch Platzhaltertexte enthält (siehe robots-Meta-Tag auf der Seite selbst).
+    Sobald der echte Inhalt steht: robots-Meta-Tag entfernen und diese URL
+    hier ergänzen:
+    <url><loc>https://tunundsein-ergotherapie.de/neurofeedback.html</loc></url>
+  -->
+</urlset>
