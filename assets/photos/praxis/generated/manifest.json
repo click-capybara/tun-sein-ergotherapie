@@ -1,0 +1,44 @@
+{
+  "behandlungsraum": {"source_width": 1451, "source_height": 1084, "variants": [
+    {"width": 480, "webp_bytes": 17058, "avif_bytes": 9280},
+    {"width": 800, "webp_bytes": 37350, "avif_bytes": 19378},
+    {"width": 1200, "webp_bytes": 71138, "avif_bytes": 34704},
+    {"width": 1451, "webp_bytes": 98808, "avif_bytes": 47973}
+  ]},
+  "beratungsraum-schreibtisch": {"source_width": 4080, "source_height": 3072, "variants": [
+    {"width": 480, "webp_bytes": 20876, "avif_bytes": 12261},
+    {"width": 800, "webp_bytes": 52926, "avif_bytes": 31071},
+    {"width": 1200, "webp_bytes": 111064, "avif_bytes": 64408},
+    {"width": 1600, "webp_bytes": 184860, "avif_bytes": 107071}
+  ]},
+  "beratungsraum-sessel": {"source_width": 4080, "source_height": 3072, "variants": [
+    {"width": 480, "webp_bytes": 14438, "avif_bytes": 8491},
+    {"width": 800, "webp_bytes": 35266, "avif_bytes": 19952},
+    {"width": 1200, "webp_bytes": 72076, "avif_bytes": 40401},
+    {"width": 1600, "webp_bytes": 119420, "avif_bytes": 66238}
+  ]},
+  "beratungsraum-tv": {"source_width": 4080, "source_height": 3072, "variants": [
+    {"width": 480, "webp_bytes": 18246, "avif_bytes": 10085},
+    {"width": 800, "webp_bytes": 41158, "avif_bytes": 21197},
+    {"width": 1200, "webp_bytes": 79372, "avif_bytes": 39014},
+    {"width": 1600, "webp_bytes": 129526, "avif_bytes": 60488}
+  ]},
+  "bewegungsraum": {"source_width": 3890, "source_height": 3072, "variants": [
+    {"width": 480, "webp_bytes": 15216, "avif_bytes": 9925},
+    {"width": 800, "webp_bytes": 33816, "avif_bytes": 21082},
+    {"width": 1200, "webp_bytes": 64770, "avif_bytes": 38519},
+    {"width": 1600, "webp_bytes": 100716, "avif_bytes": 58272}
+  ]},
+  "empfang": {"source_width": 4080, "source_height": 3072, "variants": [
+    {"width": 480, "webp_bytes": 14440, "avif_bytes": 8282},
+    {"width": 800, "webp_bytes": 31542, "avif_bytes": 17223},
+    {"width": 1200, "webp_bytes": 59964, "avif_bytes": 30834},
+    {"width": 1600, "webp_bytes": 92994, "avif_bytes": 47590}
+  ]},
+  "teekueche": {"source_width": 4080, "source_height": 3072, "variants": [
+    {"width": 480, "webp_bytes": 18520, "avif_bytes": 11100},
+    {"width": 800, "webp_bytes": 40278, "avif_bytes": 22297},
+    {"width": 1200, "webp_bytes": 73138, "avif_bytes": 38493},
+    {"width": 1600, "webp_bytes": 112964, "avif_bytes": 56497}
+  ]}
+}
