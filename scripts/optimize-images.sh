@@ -44,7 +44,14 @@ fi
 MANIFEST="$OUT_DIR/manifest.json"
 SNIPPETS="$OUT_DIR/snippets.md"
 echo "{" > "$MANIFEST"
-: > "$SNIPPETS"
+{
+  echo "# Copy-paste-fertige <picture>-Snippets (generiert)"
+  echo
+  echo "Ein Block pro Bild – fertiges HTML, kein Markdown."
+  echo "Vor dem Einbau: \`ALT_TEXT\` durch aussagekräftigen deutschen Alt-Text"
+  echo "ersetzen und \`sizes\` ans Layout anpassen."
+  echo
+} > "$SNIPPETS"
 
 VIOLATIONS=0
 
@@ -147,4 +154,5 @@ fi
 
 echo
 echo "Fertig. Manifest: $MANIFEST"
-echo "Snippets (picture-Markup): $SNIPPETS"
+PICTURE_COUNT="$(grep -c '^<picture>' "$SNIPPETS")"
+echo "Snippets ($PICTURE_COUNT picture-Blöcke): $SNIPPETS"

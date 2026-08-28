@@ -1,3 +1,9 @@
+# Copy-paste-fertige <picture>-Snippets (generiert)
+
+Ein Block pro Bild – fertiges HTML, kein Markdown.
+Vor dem Einbau: `ALT_TEXT` durch aussagekräftigen deutschen Alt-Text
+ersetzen und `sizes` ans Layout anpassen.
+
 ## behandlungsraum
 
 ```html
