@@ -9,7 +9,7 @@
     srcset="assets/photos/praxis/generated/behandlungsraum-480w.webp 480w, assets/photos/praxis/generated/behandlungsraum-800w.webp 800w, assets/photos/praxis/generated/behandlungsraum-1200w.webp 1200w, assets/photos/praxis/generated/behandlungsraum-1451w.webp 1451w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/behandlungsraum-800w.webp" width="800" height="597"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 
@@ -24,7 +24,7 @@
     srcset="assets/photos/praxis/generated/beratungsraum-schreibtisch-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-schreibtisch-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-schreibtisch-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-schreibtisch-1600w.webp 1600w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/beratungsraum-schreibtisch-800w.webp" width="800" height="602"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 
@@ -39,7 +39,7 @@
     srcset="assets/photos/praxis/generated/beratungsraum-sessel-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-sessel-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-sessel-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-sessel-1600w.webp 1600w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/beratungsraum-sessel-800w.webp" width="800" height="602"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 
@@ -54,7 +54,7 @@
     srcset="assets/photos/praxis/generated/beratungsraum-tv-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-tv-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-tv-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-tv-1600w.webp 1600w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/beratungsraum-tv-800w.webp" width="800" height="602"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 
@@ -69,7 +69,7 @@
     srcset="assets/photos/praxis/generated/bewegungsraum-480w.webp 480w, assets/photos/praxis/generated/bewegungsraum-800w.webp 800w, assets/photos/praxis/generated/bewegungsraum-1200w.webp 1200w, assets/photos/praxis/generated/bewegungsraum-1600w.webp 1600w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/bewegungsraum-800w.webp" width="800" height="631"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 
@@ -84,7 +84,7 @@
     srcset="assets/photos/praxis/generated/empfang-480w.webp 480w, assets/photos/praxis/generated/empfang-800w.webp 800w, assets/photos/praxis/generated/empfang-1200w.webp 1200w, assets/photos/praxis/generated/empfang-1600w.webp 1600w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/empfang-800w.webp" width="800" height="602"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 
@@ -99,7 +99,7 @@
     srcset="assets/photos/praxis/generated/teekueche-480w.webp 480w, assets/photos/praxis/generated/teekueche-800w.webp 800w, assets/photos/praxis/generated/teekueche-1200w.webp 1200w, assets/photos/praxis/generated/teekueche-1600w.webp 1600w"
     sizes="(max-width: 700px) 100vw, 50vw">
   <img src="assets/photos/praxis/generated/teekueche-800w.webp" width="800" height="602"
-    alt="ALT_TEXT" loading="lazy" decoding="async">
+    alt="ALT_TEXT" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
 </picture>
 ```
 

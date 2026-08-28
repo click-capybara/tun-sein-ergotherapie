@@ -117,6 +117,7 @@ for src in "${SOURCES[@]}"; do
   echo "  ]}," >> "$MANIFEST"            # Eintrag schließen (Komma evtl. letzter)
 
   # Copy-paste-fertiges <picture>-Snippet (alt-Text und sizes ans Layout anpassen!)
+  SIZES="(max-width: 700px) 100vw, 50vw"
   {
     echo "## ${base}"
     echo
@@ -124,12 +125,12 @@ for src in "${SOURCES[@]}"; do
     echo "<picture>"
     echo "  <source type=\"image/avif\""
     echo "    srcset=\"${avif_srcset}\""
-    echo "    sizes=\"(max-width: 700px) 100vw, 50vw\">"
+    echo "    sizes=\"${SIZES}\">"
     echo "  <source type=\"image/webp\""
     echo "    srcset=\"${webp_srcset}\""
-    echo "    sizes=\"(max-width: 700px) 100vw, 50vw\">"
+    echo "    sizes=\"${SIZES}\">"
     echo "  <img src=\"${FALLBACK_SRC}.webp\" width=\"${FALLBACK_W}\" height=\"${FALLBACK_H}\""
-    echo "    alt=\"ALT_TEXT\" loading=\"lazy\" decoding=\"async\">"
+    echo "    alt=\"ALT_TEXT\" loading=\"lazy\" decoding=\"async\" sizes=\"${SIZES}\">"
     echo "</picture>"
     echo '```'
     echo
