@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tunundsein-ergotherapie.de/sitemap.xml
+
+<!-- pr-dev e2e test (revert) -->
