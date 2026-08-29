@@ -26,19 +26,19 @@
   .praxis-gallery img{width:100%; height:auto; display:block; border-radius:24px;}
   @media (min-width:700px){
     .praxis-gallery{grid-template-columns:repeat(2,1fr); justify-content:center;}
-    /* Zentrierung für ungerade Anzahl (3, 5, 7 Items) – beide Zustände */
-    .praxis-gallery > :nth-last-child(1):nth-child(odd) {
+    /* Zentrierung für ungerade Anzahl (3, 5, 7 Items) – NUR sichtbare Kinder zählen */
+    .praxis-gallery > :not(.gallery-hidden):nth-last-child(1):nth-child(odd) {
       grid-column: 1 / -1;
       justify-self: center;
       max-width: 400px;
     }
   }
   .gallery-hidden{display:none;}
-  .gallery-expand{margin-top:1.5rem;}
-  .gallery-expand summary{cursor:pointer; font-weight:600; color:var(--color-primary); padding:0.5rem 0; list-style:none;}
+  .gallery-expand{margin-top:1.5rem; text-align:center;}
+  .gallery-expand summary{cursor:pointer; font-weight:600; color:var(--color-primary); padding:0.5rem 1rem; list-style:none; display:inline-block; border-radius:0.5rem; background:var(--color-primary, #0066cc); color:white;}
   .gallery-expand summary::-webkit-details-marker{display:none;}
   .gallery-expand summary::marker{content:""; display:none;}
-  .gallery-expand summary::after{content:" ▼"; font-size:0.8em; transition:transform 0.2s;}
+  .gallery-expand summary::after{content:" ▼"; font-size:0.8em; margin-left:0.5rem; transition:transform 0.2s;}
   .gallery-expand[open] summary::after{transform:rotate(180deg);}
 
   /* Lightbox */
