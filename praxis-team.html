@@ -25,8 +25,15 @@
   .praxis-gallery{display:grid; grid-template-columns:1fr; gap:24px; margin-top:2.75rem;}
   .praxis-gallery img{width:100%; height:auto; display:block; border-radius:24px;}
   @media (min-width:700px){
-    .praxis-gallery{grid-template-columns:repeat(3,1fr);}
+    .praxis-gallery{grid-template-columns:repeat(2,1fr);}
   }
+  .gallery-hidden{display:none;}
+  .gallery-expand{margin-top:1.5rem;}
+  .gallery-expand summary{cursor:pointer; font-weight:600; color:var(--color-primary); padding:0.5rem 0; list-style:none;}
+  .gallery-expand summary::-webkit-details-marker{display:none;}
+  .gallery-expand summary::marker{content:""; display:none;}
+  .gallery-expand summary::after{content:" ▼"; font-size:0.8em; transition:transform 0.2s;}
+  .gallery-expand[open] summary::after{transform:rotate(180deg);}
 </style>
 </head>
 <body>
@@ -70,34 +77,77 @@
         <picture>
           <source type="image/avif"
             srcset="assets/photos/praxis/generated/empfang-480w.avif 480w, assets/photos/praxis/generated/empfang-800w.avif 800w, assets/photos/praxis/generated/empfang-1200w.avif 1200w, assets/photos/praxis/generated/empfang-1600w.avif 1600w"
-            sizes="(max-width: 700px) 100vw, 33vw">
+            sizes="(max-width: 700px) 100vw, 50vw">
           <source type="image/webp"
             srcset="assets/photos/praxis/generated/empfang-480w.webp 480w, assets/photos/praxis/generated/empfang-800w.webp 800w, assets/photos/praxis/generated/empfang-1200w.webp 1200w, assets/photos/praxis/generated/empfang-1600w.webp 1600w"
-            sizes="(max-width: 700px) 100vw, 33vw">
+            sizes="(max-width: 700px) 100vw, 50vw">
           <img src="assets/photos/praxis/generated/empfang-800w.webp" width="800" height="602"
-            alt="Empfangsbereich der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 33vw">
+            alt="Empfangsbereich der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
         </picture>
         <picture>
           <source type="image/avif"
             srcset="assets/photos/praxis/generated/bewegungsraum-480w.avif 480w, assets/photos/praxis/generated/bewegungsraum-800w.avif 800w, assets/photos/praxis/generated/bewegungsraum-1200w.avif 1200w, assets/photos/praxis/generated/bewegungsraum-1600w.avif 1600w"
-            sizes="(max-width: 700px) 100vw, 33vw">
+            sizes="(max-width: 700px) 100vw, 50vw">
           <source type="image/webp"
             srcset="assets/photos/praxis/generated/bewegungsraum-480w.webp 480w, assets/photos/praxis/generated/bewegungsraum-800w.webp 800w, assets/photos/praxis/generated/bewegungsraum-1200w.webp 1200w, assets/photos/praxis/generated/bewegungsraum-1600w.webp 1600w"
-            sizes="(max-width: 700px) 100vw, 33vw">
+            sizes="(max-width: 700px) 100vw, 50vw">
           <img src="assets/photos/praxis/generated/bewegungsraum-800w.webp" width="800" height="631"
-            alt="Bewegungsraum der Praxis Tun & Sein für Aktivität und Training" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 33vw">
+            alt="Bewegungsraum der Praxis Tun & Sein für Aktivität und Training" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
         </picture>
         <picture>
           <source type="image/avif"
             srcset="assets/photos/praxis/generated/beratungsraum-sessel-480w.avif 480w, assets/photos/praxis/generated/beratungsraum-sessel-800w.avif 800w, assets/photos/praxis/generated/beratungsraum-sessel-1200w.avif 1200w, assets/photos/praxis/generated/beratungsraum-sessel-1600w.avif 1600w"
-            sizes="(max-width: 700px) 100vw, 33vw">
+            sizes="(max-width: 700px) 100vw, 50vw">
           <source type="image/webp"
             srcset="assets/photos/praxis/generated/beratungsraum-sessel-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-sessel-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-sessel-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-sessel-1600w.webp 1600w"
-            sizes="(max-width: 700px) 100vw, 33vw">
+            sizes="(max-width: 700px) 100vw, 50vw">
           <img src="assets/photos/praxis/generated/beratungsraum-sessel-800w.webp" width="800" height="602"
-            alt="Beratungsraum mit Sessel in der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 33vw">
+            alt="Beratungsraum mit Sessel in der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
+        </picture>
+        <picture class="gallery-hidden">
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/behandlungsraum-480w.avif 480w, assets/photos/praxis/generated/behandlungsraum-800w.avif 800w, assets/photos/praxis/generated/behandlungsraum-1200w.avif 1200w, assets/photos/praxis/generated/behandlungsraum-1451w.avif 1451w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/behandlungsraum-480w.webp 480w, assets/photos/praxis/generated/behandlungsraum-800w.webp 800w, assets/photos/praxis/generated/behandlungsraum-1200w.webp 1200w, assets/photos/praxis/generated/behandlungsraum-1451w.webp 1451w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <img src="assets/photos/praxis/generated/behandlungsraum-800w.webp" width="800" height="597"
+            alt="Behandlungsraum der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
+        </picture>
+        <picture class="gallery-hidden">
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/beratungsraum-schreibtisch-480w.avif 480w, assets/photos/praxis/generated/beratungsraum-schreibtisch-800w.avif 800w, assets/photos/praxis/generated/beratungsraum-schreibtisch-1200w.avif 1200w, assets/photos/praxis/generated/beratungsraum-schreibtisch-1600w.avif 1600w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/beratungsraum-schreibtisch-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-schreibtisch-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-schreibtisch-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-schreibtisch-1600w.webp 1600w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <img src="assets/photos/praxis/generated/beratungsraum-schreibtisch-800w.webp" width="800" height="602"
+            alt="Beratungsraum mit Schreibtisch in der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
+        </picture>
+        <picture class="gallery-hidden">
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/beratungsraum-tv-480w.avif 480w, assets/photos/praxis/generated/beratungsraum-tv-800w.avif 800w, assets/photos/praxis/generated/beratungsraum-tv-1200w.avif 1200w, assets/photos/praxis/generated/beratungsraum-tv-1600w.avif 1600w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/beratungsraum-tv-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-tv-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-tv-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-tv-1600w.webp 1600w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <img src="assets/photos/praxis/generated/beratungsraum-tv-800w.webp" width="800" height="602"
+            alt="Beratungsraum mit TV in der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
+        </picture>
+        <picture class="gallery-hidden">
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/teekueche-480w.avif 480w, assets/photos/praxis/generated/teekueche-800w.avif 800w, assets/photos/praxis/generated/teekueche-1200w.avif 1200w, assets/photos/praxis/generated/teekueche-1600w.avif 1600w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/teekueche-480w.webp 480w, assets/photos/praxis/generated/teekueche-800w.webp 800w, assets/photos/praxis/generated/teekueche-1200w.webp 1200w, assets/photos/praxis/generated/teekueche-1600w.webp 1600w"
+            sizes="(max-width: 700px) 100vw, 50vw">
+          <img src="assets/photos/praxis/generated/teekueche-800w.webp" width="800" height="602"
+            alt="Teeküche der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 50vw">
         </picture>
       </div>
+      <details class="gallery-expand">
+        <summary>Alle 7 Räume anzeigen</summary>
+      </details>
     </div>
   </section>
 
@@ -127,7 +177,7 @@
             <p>Mein Weg in die Ergotherapie führte über einen zweiten Bildungsweg. Nach meinem Studium im Bereich Grafik- und Kommunikationsdesign wurde mir bewusst, dass ich Menschen aktiv in ihrer persönlichen Entwicklung unterstützen möchte. Während meiner Ausbildung zur Ergotherapeutin absolvierte ich zusätzlich eine Ausbildung zum systemischen Coach, deren Perspektiven und Techniken ich heute in meine therapeutische Arbeit einfließen lasse.</p>
             <p>Ein fachlicher Schwerpunkt liegt in der Arbeit mit Jugendlichen und Erwachsenen im psychiatrischen Bereich. Hier begleite ich Menschen unter anderem bei Depressionen, ADHS, Stress- und Erschöpfungszuständen. Ergänzend habe ich mich im Bereich Neurofeedback fortgebildet und nutze dieses gezielt zur Förderung von Aufmerksamkeit, Konzentration und Selbstregulation.</p>
             <p>Durch meine Begeisterung für Bewegung und die Funktionsweise des menschlichen Körpers begleite ich Menschen ebenso in den Fachbereichen Neurologie, Orthopädie und Handtherapie.</p>
-            <p>In meiner Freizeit finde ich Ausgleich und Inspiration in kreativen Tätigkeiten, in der Natur beim Wandern sowie auf Reisen. Bewegung und Sport sind für mich nicht nur ein Hobby, sondern eine wichtige Quelle von Energie, Ausgeglichenheit und persönlichem Wachstum.</p> 
+            <p>In meiner Freizeit finde ich Ausgleich und Inspiration in kreativen Tätigkeiten, in der Natur beim Wandern sowie auf Reisen. Bewegung und Sport sind für mich nicht nur ein Hobby, sondern eine wichtige Quelle von Energie, Ausgeglichenheit und persönlichem Wachstum.</p>
           </div>
         </div>
       </div>
@@ -164,10 +214,23 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Tun & Sein – Praxis für Ergotherapie & Neurofeedback</span>
-      <span><a href="https://www.google.com/maps/search/?api=1&query=K%C3%B6lner+Stra%C3%9Fe+231%2C+40227+D%C3%BCsseldorf" target="_blank" rel="noopener">Kölner Straße 231, 40227 Düsseldorf</a> · <a href="tel:+4917671312257">(+49) 176 - 713 122 57</a></span>
+      <span><a href="https://www.google.com/maps/search/?api=1&query=K%C3%B6lner+Stra%C3%9Fe+231%2C+40227+D%C3%BCsseldorf" target="_blank" rel="noopener">Kölner Straße 231, 40227 Düsseldorf</a> · <a href="tel:+491****2257">(+49) 176 - 713 122 57</a></span>
     </div>
   </div>
 </footer>
 
+<script>
+  // Toggle hidden gallery images when <details> opens/closes
+  const galleryDetails = document.querySelector('.gallery-expand');
+  const gallery = document.querySelector('.praxis-gallery');
+  if (galleryDetails && gallery) {
+    galleryDetails.addEventListener('toggle', () => {
+      const hiddenImages = gallery.querySelectorAll('.gallery-hidden');
+      hiddenImages.forEach(pic => {
+        pic.classList.toggle('gallery-hidden', !galleryDetails.open);
+      });
+    });
+  }
+</script>
 </body>
 </html>
