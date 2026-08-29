@@ -22,10 +22,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .praxis-gallery{display:grid; grid-template-columns:1fr; gap:24px; margin-top:2.75rem;}
+  .praxis-gallery{display:grid; grid-template-columns:1fr; gap:24px; margin-top:2.75rem; justify-content:center;}
   .praxis-gallery img{width:100%; height:auto; display:block; border-radius:24px;}
   @media (min-width:700px){
     .praxis-gallery{grid-template-columns:repeat(2,1fr);}
+    .praxis-gallery > :nth-last-child(1):nth-child(odd){
+      grid-column:1 / -1;
+      justify-self:center;
+      max-width:400px;
+    }
   }
   .gallery-hidden{display:none;}
   .gallery-expand{margin-top:1.5rem;}
@@ -224,8 +229,9 @@
   const galleryDetails = document.querySelector('.gallery-expand');
   const gallery = document.querySelector('.praxis-gallery');
   if (galleryDetails && gallery) {
+    // Store reference outside listener — querySelectorAll('.gallery-hidden') returns 0 after first open
+    const hiddenImages = Array.from(gallery.querySelectorAll('.gallery-hidden'));
     galleryDetails.addEventListener('toggle', () => {
-      const hiddenImages = gallery.querySelectorAll('.gallery-hidden');
       hiddenImages.forEach(pic => {
         pic.classList.toggle('gallery-hidden', !galleryDetails.open);
       });
