@@ -21,6 +21,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .praxis-gallery{display:grid; grid-template-columns:1fr; gap:24px; margin-top:2.75rem;}
+  .praxis-gallery img{width:100%; height:auto; display:block; border-radius:24px;}
+  @media (min-width:700px){
+    .praxis-gallery{grid-template-columns:repeat(3,1fr);}
+  }
+</style>
 </head>
 <body>
 
@@ -54,15 +61,42 @@
   <!-- PRAXIS -->
   <section id="praxis" class="praxis-teaser">
     <div class="wrap">
-      <div class="praxis-teaser-grid">
-        <div class="praxis-teaser-image">
-          <img src="assets/photos/Praxis_Anmeldung1.webp" alt="Praxisräume von Tun & Sein in Düsseldorf" loading="lazy">
-        </div>
-        <div class="praxis-teaser-text">
-          <span class="eyebrow">Unsere Räume</span>
-          <h2>Raum für Entwicklung</h2>
-          <p>Bei uns treffen fachliche Kompetenz und eine wertschätzende Atmosphäre aufeinander – für Therapie, die sich an Ihnen und Ihrem Alltag orientiert.</p>
-        </div>
+      <div class="praxis-teaser-text">
+        <span class="eyebrow">Unsere Räume</span>
+        <h2>Raum für Entwicklung</h2>
+        <p>Bei uns treffen fachliche Kompetenz und eine wertschätzende Atmosphäre aufeinander – für Therapie, die sich an Ihnen und Ihrem Alltag orientiert.</p>
+      </div>
+      <div class="praxis-gallery">
+        <picture>
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/empfang-480w.avif 480w, assets/photos/praxis/generated/empfang-800w.avif 800w, assets/photos/praxis/generated/empfang-1200w.avif 1200w, assets/photos/praxis/generated/empfang-1600w.avif 1600w"
+            sizes="(max-width: 700px) 100vw, 33vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/empfang-480w.webp 480w, assets/photos/praxis/generated/empfang-800w.webp 800w, assets/photos/praxis/generated/empfang-1200w.webp 1200w, assets/photos/praxis/generated/empfang-1600w.webp 1600w"
+            sizes="(max-width: 700px) 100vw, 33vw">
+          <img src="assets/photos/praxis/generated/empfang-800w.webp" width="800" height="602"
+            alt="Empfangsbereich der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 33vw">
+        </picture>
+        <picture>
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/bewegungsraum-480w.avif 480w, assets/photos/praxis/generated/bewegungsraum-800w.avif 800w, assets/photos/praxis/generated/bewegungsraum-1200w.avif 1200w, assets/photos/praxis/generated/bewegungsraum-1600w.avif 1600w"
+            sizes="(max-width: 700px) 100vw, 33vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/bewegungsraum-480w.webp 480w, assets/photos/praxis/generated/bewegungsraum-800w.webp 800w, assets/photos/praxis/generated/bewegungsraum-1200w.webp 1200w, assets/photos/praxis/generated/bewegungsraum-1600w.webp 1600w"
+            sizes="(max-width: 700px) 100vw, 33vw">
+          <img src="assets/photos/praxis/generated/bewegungsraum-800w.webp" width="800" height="631"
+            alt="Bewegungsraum der Praxis Tun & Sein für Aktivität und Training" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 33vw">
+        </picture>
+        <picture>
+          <source type="image/avif"
+            srcset="assets/photos/praxis/generated/beratungsraum-sessel-480w.avif 480w, assets/photos/praxis/generated/beratungsraum-sessel-800w.avif 800w, assets/photos/praxis/generated/beratungsraum-sessel-1200w.avif 1200w, assets/photos/praxis/generated/beratungsraum-sessel-1600w.avif 1600w"
+            sizes="(max-width: 700px) 100vw, 33vw">
+          <source type="image/webp"
+            srcset="assets/photos/praxis/generated/beratungsraum-sessel-480w.webp 480w, assets/photos/praxis/generated/beratungsraum-sessel-800w.webp 800w, assets/photos/praxis/generated/beratungsraum-sessel-1200w.webp 1200w, assets/photos/praxis/generated/beratungsraum-sessel-1600w.webp 1600w"
+            sizes="(max-width: 700px) 100vw, 33vw">
+          <img src="assets/photos/praxis/generated/beratungsraum-sessel-800w.webp" width="800" height="602"
+            alt="Beratungsraum mit Sessel in der Praxis Tun & Sein" loading="lazy" decoding="async" sizes="(max-width: 700px) 100vw, 33vw">
+        </picture>
       </div>
     </div>
   </section>
@@ -124,6 +158,7 @@
         <ul>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="/videoueberwachung.html">Videoüberwachung</a></li>
         </ul>
       </div>
     </div>
