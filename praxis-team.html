@@ -27,24 +27,39 @@
   .gallery-img img{width:100%; height:100%; object-fit:cover; display:block;}
   @media (min-width:700px){
     .praxis-gallery{grid-template-columns:repeat(2,1fr); justify-content:center;}
-    /* Zentrierung für ungerade Anzahl (3, 5, 7 Items) – sichtbares letztes Element via JS-Klasse */
-    .praxis-gallery > .is-last-odd{
-      grid-column:1 / -1;
-      justify-self:center;
-      max-width:calc(50% - 12px);
+    /* Zentrierung für ungerade Anzahl (3, 5, 7 Items) – NUR sichtbare Kinder zählen */
+    .praxis-gallery.has-odd-visible > :last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 400px;
     }
   }
   .gallery-hidden{display:none;}
   .gallery-expand{margin-top:1.5rem; text-align:center;}
   .gallery-expand summary{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:14px 28px; border:none; border-radius:100px;
-    background:var(--ink); color:var(--white);
-    font-weight:700; font-size:.95rem; cursor:pointer; list-style:none;
-    transition:transform .18s ease, background .18s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: .95rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .18s ease, background .18s ease;
+    text-align: center;
+    list-style: none;
   }
-  .gallery-expand summary:hover{background:var(--clay-deep); transform:translateY(-2px);}
-  .gallery-expand summary:active{transform:scale(.98);}
+  .gallery-expand summary:hover { 
+    background: var(--clay-deep); 
+    transform: translateY(-2px);
+  }
+  .gallery-expand summary:active { 
+    transform: scale(0.98); 
+  }
   .gallery-expand summary::-webkit-details-marker{display:none;}
   .gallery-expand summary::marker{content:""; display:none;}
   .gallery-expand summary::after{content:" ▼"; font-size:0.8em; margin-left:0.5rem; transition:transform 0.2s;}
@@ -283,28 +298,35 @@
   // Toggle hidden gallery images when <details> opens/closes
   const galleryDetails = document.querySelector('.gallery-expand');
   const gallery = document.querySelector('.praxis-gallery');
+  
+  function updateGalleryLayout() {
+    const visible = gallery.querySelectorAll(':not(.gallery-hidden)').length;
+    gallery.classList.toggle('has-odd-visible', visible % 2 === 1);
+  }
+
   if (galleryDetails && gallery) {
     // Store reference outside listener — querySelectorAll('.gallery-hidden') returns 0 after first open
     const hiddenImages = Array.from(gallery.querySelectorAll('.gallery-hidden'));
     galleryDetails.addEventListener('toggle', () => {
-      hiddenImages.forEach(pic => {
-        pic.classList.toggle('gallery-hidden', !galleryDetails.open);
+      const allImages = gallery.querySelectorAll('.gallery-img');
+      allImages.forEach((pic, index) => {
+        if (galleryDetails.open) {
+          // When details is open, show all images
+          pic.classList.remove('gallery-hidden');
+        } else {
+          // When details is closed, hide images beyond the first 3
+          if (index >= 3) {
+            pic.classList.add('gallery-hidden');
+          } else {
+            pic.classList.remove('gallery-hidden');
+          }
+        }
       });
       updateGalleryLayout();
     });
     
-    // Initial layout update on load
+    // Initial call to set the correct class on page load
     updateGalleryLayout();
-  }
-
-  function updateGalleryLayout() {
-    if (!gallery) return;
-    const visibleImages = gallery.querySelectorAll('.gallery-img:not(.gallery-hidden)');
-    const count = visibleImages.length;
-    visibleImages.forEach(img => img.classList.remove('is-last-odd'));
-    if (count % 2 === 1) {
-      visibleImages[count - 1].classList.add('is-last-odd');
-    }
   }
 
   // Lightbox functionality
@@ -484,7 +506,6 @@
             closeLightbox();
           }
         }
-        updateGalleryLayout();
       });
     }
   })();
