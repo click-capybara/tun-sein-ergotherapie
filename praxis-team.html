@@ -22,8 +22,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .praxis-gallery{display:grid; grid-template-columns:1fr; gap:24px; margin-top:2.75rem;}
-  .praxis-gallery img{width:100%; height:auto; display:block; border-radius:24px;}
+  .praxis-gallery{display:grid; grid-template-columns:1fr; gap:24px; margin-top:2.75rem; justify-content:center;}
+  .gallery-img{aspect-ratio:4/3; overflow:hidden; border-radius:24px;}
+  .gallery-img img{width:100%; height:100%; object-fit:cover; display:block;}
   @media (min-width:700px){
     .praxis-gallery{grid-template-columns:repeat(2,1fr); justify-content:center;}
     /* Zentrierung für ungerade Anzahl (3, 5, 7 Items) – NUR sichtbare Kinder zählen */
@@ -304,6 +305,8 @@
   }
 
   if (galleryDetails && gallery) {
+    // Store reference outside listener — querySelectorAll('.gallery-hidden') returns 0 after first open
+    const hiddenImages = Array.from(gallery.querySelectorAll('.gallery-hidden'));
     galleryDetails.addEventListener('toggle', () => {
       const allImages = gallery.querySelectorAll('.gallery-img');
       allImages.forEach((pic, index) => {
